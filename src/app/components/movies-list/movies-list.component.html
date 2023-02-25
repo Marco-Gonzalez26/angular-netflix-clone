@@ -1,0 +1,12 @@
+<div class="bg-[#141414] pl-10 pb-10">
+  <h1 class="font-medium text-white text-xl mb-4">{{ title }}</h1>
+  <swiper-container [config]="config">
+    <swiper-slide *ngFor="let movie of movies" class="mr-2">
+      <img
+        class="w-64 rounded"
+        [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+        [title]="movie.original_title"
+      />
+    </swiper-slide>
+  </swiper-container>
+</div>
