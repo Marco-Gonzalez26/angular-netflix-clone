@@ -1,5 +1,5 @@
 <nav
-  class="h-16 w-full bg-black px-10 flex items-center justify-start gap-x-5 font-medium"
+  class="h-16 w-full bg-gradient-to-b from-black to-transparent px-10 flex items-center justify-start gap-x-5 font-normal fixed inset-0 z-50 "
 >
   <div class="w-24">
     <img
@@ -10,15 +10,7 @@
   </div>
   <ul class="text-white/80 w-2/3 gap-x-6 text-sm ml-4 hidden md:flex">
     <li *ngFor="let item of navItems">
-      <a [href]="item.href">{{ item.name }}</a>
-    </li>
-  </ul>
-
-  <ul
-    class="text-white/80 bg-black w-1/2 flex flex-col gap-x-6 text-sm ml-4 h-screen fixed top-0 right-0 md:hidden"
-  >
-    <li *ngFor="let item of navItems">
-      <a [href]="item.href">{{ item.name }}</a>
+      <a [href]="item.href" routerLinkActive="">{{ item.name }}</a>
     </li>
   </ul>
 </nav>

@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Series', href: '/series' },
+    { name: 'TV Shows', href: '/series' },
     { name: 'Movies', href: '/movies' },
-    { name: 'Featured', href: '/featured' },
+    { name: 'New & Popular', href: '/latest' },
   ];
 }
