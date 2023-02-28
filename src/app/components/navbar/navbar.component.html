@@ -1,5 +1,6 @@
 <nav
-  class="h-16 w-full bg-gradient-to-b from-black to-transparent px-10 flex items-center justify-start gap-x-5 font-normal fixed inset-0 z-50 "
+  class="nav-bar h-16 w-full bg-gradient-to-b from-black to-transparent px-10 flex items-center justify-start gap-x-5 font-normal fixed inset-0 z-50"
+  [class.active]="isScrolled ? 'active' : ''"
 >
   <div class="w-24">
     <img

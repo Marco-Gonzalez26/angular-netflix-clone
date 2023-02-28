@@ -1,12 +1,61 @@
 <div class="bg-[#141414] pl-10 pb-10">
-  <h1 class="font-medium text-white text-xl mb-4">{{ title }}</h1>
+  <h1 class="font-medium text-white text-xl mb-4 relative">{{ title }}</h1>
   <swiper-container [config]="config">
     <swiper-slide *ngFor="let movie of movies" class="mr-2">
-      <img
-        class="w-64 rounded"
-        [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
-        [title]="movie.original_title"
-      />
+      <div
+        class="flex relative flex-col bg-[#191919] overflow-hidden rounded z-50 [&>div]:hover:bottom-0 [&>div]:hover:opacity-100 [&>img]:hover:scale-110"
+      >
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+          [title]="movie.original_title"
+          class="w-full transition-all duration-300"
+        />
+        <div
+          class="flex p-4 z-50 absolute -bottom-full bg-gradient-to-t from-black via-[#181818] to-transparent opacity-0 transition duration-300 w-full"
+        >
+          <div class="text-white w-full">
+            <h2 class="font-medium text-2xl">
+              {{ movie.title }}
+            </h2>
+            <small>{{ movie.release_date }}</small>
+          </div>
+          <div class="flex items-center justify-center">
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="border-4 rounded-full p-2 border-white"
+            >
+              <path
+                d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z"
+                fill="#fff"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              fill="#fff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#fff"
+                d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18Zm0-16.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Z"
+              />
+              <path
+                fill="#fff"
+                d="M12 16.75a.76.76 0 0 1-.75-.75V8a.75.75 0 1 1 1.5 0v8a.76.76 0 0 1-.75.75Z"
+              />
+              <path
+                fill="#fff"
+                d="M16 12.75H8a.75.75 0 1 1 0-1.5h8a.75.75 0 1 1 0 1.5Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
     </swiper-slide>
   </swiper-container>
 </div>
