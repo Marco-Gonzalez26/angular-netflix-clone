@@ -13,6 +13,7 @@ import { MoviesListComponent } from './components/movies-list/movies-list.compon
 import { HeroComponent } from './components/hero/hero.component';
 import { FeaturedMoviesComponent } from './components/featured-movies/featured-movies.component';
 import { FeaturedTvShowsComponent } from './components/featured-tv-shows/featured-tv-shows.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 register(true);
 
@@ -24,6 +25,7 @@ register(true);
     HeroComponent,
     FeaturedMoviesComponent,
     FeaturedTvShowsComponent,
+    MovieCardComponent,
   ],
   imports: [
     BrowserModule,

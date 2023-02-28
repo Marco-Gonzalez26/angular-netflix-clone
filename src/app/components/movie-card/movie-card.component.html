@@ -1,0 +1,24 @@
+<div
+  class="absolute w-64  flex-col bg-[#191919] rounded z-50"
+  [style]="{ display: display }"
+
+>
+  <img
+    [src]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path"
+    [title]="movie.original_title"
+    class="w-full"
+  />
+  <div class="p-4">
+    <div>
+      <mat-icon>play_circle_filled</mat-icon>
+      <mat-icon>add_circle_outline</mat-icon>
+    </div>
+    <div class="text-white">
+      <h2>
+        {{ movie.title }}
+        <small>{{ movie.release_date }}</small>
+      </h2>
+      <p>{{ movie.overview.substring(0, 100) }}...</p>
+    </div>
+  </div>
+</div>

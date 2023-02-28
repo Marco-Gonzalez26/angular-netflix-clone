@@ -18,15 +18,15 @@ import SwiperCore, {
   encapsulation: ViewEncapsulation.None,
 })
 export class MoviesListComponent {
-  constructor() {
-    SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Mousewheel]);
-  }
-
   @Input() movies: Movie[] = [];
   @Input() title = '';
 
   show() {
-    console.log('show');
+
+  }
+
+  noShow() {
+
   }
 
   config: SwiperOptions = {

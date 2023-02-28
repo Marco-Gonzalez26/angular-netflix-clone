@@ -10,7 +10,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class FeaturedTvShowsComponent implements OnInit {
   constructor(private moviesService: MoviesService) {}
 
-  tvShows: Movie[] = [];
+  tvShows: any = [];
   ngOnInit(): void {
     this.moviesService.getTrending('tv', 'week').subscribe((data) => {
       this.tvShows = data.results;
